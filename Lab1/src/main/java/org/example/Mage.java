@@ -69,7 +69,7 @@ public class Mage implements Comparable{
     public void PrintRecu(Mage m, Set<Mage> apprentices, int depth) {
         for (int i = 0; i <= depth; i++)
             System.out.print("-");
-        System.out.println(m);
+        System.out.print(m);
         if (apprentices.size() == 0) {
             return;
         }

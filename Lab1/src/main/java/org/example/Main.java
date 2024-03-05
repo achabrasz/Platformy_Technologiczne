@@ -27,6 +27,9 @@ public class Main {
         mage1.AddApprentice(mage6);
         mage6.AddApprentice(mage5);
         mage9.AddApprentice(mage8);
+        mage10.AddApprentice(mage3);
+        mage10.AddApprentice(mage2);
+        mage3.AddApprentice(mage2);
 
         mages.add(mage1);
         mages.add(mage2);
@@ -42,7 +45,7 @@ public class Main {
         //System.out.println(mage1);
         System.out.println(mages);
         generateStatistics(mages, mode);
-        //mage1.PrintAll();
+        mage1.PrintAll();
     }
 
     public static void generateStatistics(Set<Mage> mages, int mode) {
@@ -57,6 +60,8 @@ public class Main {
 
         // Generowanie statystyk
         for (Mage mage : mages) {
+            Set<Mage> checked = new HashSet<Mage>();
+            checked.add(mage);
             int descendants = countDescendants(mage);
             statistics.put(mage, descendants);
         }
@@ -70,10 +75,16 @@ public class Main {
 
     // Metoda rekurencyjnie licząca liczbę potomków
     public static int countDescendants(Mage mage) {
-        int count = mage.getApprentices().size();
-        for (Mage apprentice : mage.getApprentices()) {
-            count += countDescendants(apprentice);
+        return countDescendantsLogic(mage, new HashSet<Mage>()).size();
+    }
+
+    public static Set<Mage> countDescendantsLogic(Mage mage, Set<Mage> mages) {
+        for (Mage mage2 : mage.getApprentices()) {
+            if (!mages.contains(mage2)) {
+                mages.add(mage2);
+            }
+            countDescendantsLogic(mage2, mages);
         }
-        return count;
+        return mages;
     }
 }
