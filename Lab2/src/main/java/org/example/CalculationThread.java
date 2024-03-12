@@ -3,7 +3,7 @@ package org.example;
 import static java.lang.Math.random;
 import static java.lang.Math.sqrt;
 
-public class CalculationThread extends Thread{
+public class CalculationThread implements Runnable{
     private TaskQueue taskQueue;
     private ResultList resultList;
 
@@ -30,6 +30,7 @@ public class CalculationThread extends Thread{
                 Task task = taskQueue.getTask();
                 Result result = calculateResult(task);
                 resultList.addResult(result);
+                resultList.Print();
             } catch (InterruptedException e) {
                 break;
             }

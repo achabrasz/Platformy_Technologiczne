@@ -10,6 +10,7 @@ public class ResultList {
         for (Result result : results) {
             System.out.println(result);
         }
+        results.clear();
     }
 
     public synchronized void addResult(Result result) {

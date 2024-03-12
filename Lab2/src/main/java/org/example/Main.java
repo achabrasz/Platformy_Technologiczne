@@ -1,15 +1,16 @@
 package org.example;
 
 import java.util.Scanner;
+import java.lang.Thread;
 
 public class Main {
     public static void main(String[] args) {
         TaskQueue taskQueue = new TaskQueue();
         ResultList resultList = new ResultList();
         int numberOfThreads = Integer.parseInt(args[0]);
-        CalculationThread[] threads = new CalculationThread[numberOfThreads];
+        Thread[] threads = new Thread[numberOfThreads];
         for (int i = 0; i < numberOfThreads; i++) {
-            threads[i] = new CalculationThread(taskQueue, resultList);
+            threads[i] = new Thread(new CalculationThread(taskQueue, resultList));
             threads[i].start();
         }
         Scanner scanner = new Scanner(System.in);
@@ -17,7 +18,7 @@ public class Main {
             System.out.println("Enter a number or type exit to finish program: ");
             String input = scanner.nextLine();
             if (input.equals("exit")) {
-                for (CalculationThread thread : threads) {
+                for (Thread thread : threads) {
                     try {
                         thread.interrupt();
                     } catch (Exception e) {
@@ -35,14 +36,14 @@ public class Main {
             int number = Integer.parseInt(input);
             taskQueue.addTask(new Task(number));
         }
-        for (CalculationThread thread : threads) {
+        for (Thread thread : threads) {
             try {
                 thread.join();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        resultList.Print();
+        //resultList.Print();
         System.exit(0);
     }
 }
