@@ -40,6 +40,9 @@ public class CalculationThread implements Runnable{
     private Result calculateResult(Task task) throws InterruptedException {
         int number = task.getNumber();
         boolean isPrime = true;
+        if (number <= 1) {
+            isPrime = false;
+        }
         for (int i = 2; i < sqrt(number); i++) {
             if (number % i == 0) {
                 isPrime = false;

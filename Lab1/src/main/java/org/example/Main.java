@@ -1,4 +1,4 @@
-package main.java.org.example;
+package org.example;
 import java.util.*;
 //import Mage;
 
@@ -60,8 +60,8 @@ public class Main {
 
         // Generowanie statystyk
         for (Mage mage : mages) {
-            Set<Mage> checked = new HashSet<Mage>();
-            checked.add(mage);
+            //Set<Mage> checked = new HashSet<Mage>();
+            //checked.add(mage);
             int descendants = countDescendants(mage);
             statistics.put(mage, descendants);
         }
