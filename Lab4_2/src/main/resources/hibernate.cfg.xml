@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Dane połączenia z bazą danych -->
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:mem:test</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialekt bazy danych -->
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Tryb debugowania -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Przygotowywanie tabel przy uruchamianiu -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mappowanie klas encyjnych -->
+        <mapping class="org.example.Mage"/>
+        <mapping class="org.example.Tower"/>
+    </session-factory>
+</hibernate-configuration>
