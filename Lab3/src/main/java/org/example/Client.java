@@ -11,6 +11,7 @@ public class Client {
     private static final Logger logger = Logger.getLogger(Client.class.getName());
     private static final String SERVER_ADDRESS = "localhost";
     private static final int PORT = 12345;
+    private ObjectInputStream in;
 
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVER_ADDRESS, PORT);
@@ -31,7 +32,9 @@ public class Client {
             }
             */
             String text;
+            //new Thread(new OutputThread(socket)).start();
             while (true) {
+
                 System.out.print("Enter message: ");
                 String messageText = scanner.nextLine();
 
@@ -52,5 +55,7 @@ public class Client {
             throw new RuntimeException(e);
         }
     }
+
+
 }
 

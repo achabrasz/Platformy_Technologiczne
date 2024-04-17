@@ -30,7 +30,7 @@ public class Main {
 
             Mage mage2 = new Mage("Mage Two", 20, tower1);
 
-            Mage mage3 = new Mage("Mage Three", 15, tower2);
+            Mage mage3 = new Mage("Mage Three", 16, tower2);
 
             session.save(tower1);
             session.save(tower2);
@@ -46,21 +46,18 @@ public class Main {
 
             session.save(mage1);
 
-            // Pobranie wszystkich magów z poziomem większym niż
             List<Mage> magesWithHigherLevel = session.createQuery("FROM Mage WHERE level > :level", Mage.class)
                     .setParameter("level", 15)
                     .getResultList();
             System.out.println("Mages with level higher than 15:");
             magesWithHigherLevel.forEach(mage -> System.out.println(mage.getName() + " " + mage.getLevel()));
 
-            // Pobranie wszystkich wież niższych niż
             List<Tower> towersWithLowerHeight = session.createQuery("FROM Tower WHERE height < :height", Tower.class)
                     .setParameter("height", 120)
                     .getResultList();
             System.out.println("\nTowers with height lower than 120:");
             towersWithLowerHeight.forEach(tower -> System.out.println(tower.getName() + " " + tower.getHeight()));
 
-            // Pobranie wszystkich magów z poziomem wyższym niż z danej wieży
             List<Mage> magesFromTowerWithHigherLevel = session.createQuery("FROM Mage WHERE tower = :tower AND level > :level", Mage.class)
                     .setParameter("tower", tower1)
                     .setParameter("level", 15)

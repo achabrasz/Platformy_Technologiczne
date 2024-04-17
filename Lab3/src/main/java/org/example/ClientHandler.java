@@ -11,6 +11,7 @@ public class ClientHandler implements Runnable {
     private final Socket clientSocket;
 
     private ObjectOutputStream out;
+    private ObjectInputStream in;
 
     public ClientHandler(Socket socket) {
         this.clientSocket = socket;
@@ -23,11 +24,12 @@ public class ClientHandler implements Runnable {
                 ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
         ) {
             this.out = out;
+            this.in = in;
             logger.info("Client connected from: " + clientSocket.getInetAddress());
-
             while (true) {
                 Message message = (Message) in.readObject();
                 logger.info("Message received: " + message.getText());
+                //System.out.println("Message received: " + message.getText());
                 Server.broadcastMessage("Client " + clientSocket.getInetAddress() + " said: " + message.getText(), this);
             }
         } catch (IOException | ClassNotFoundException e) {

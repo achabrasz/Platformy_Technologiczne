@@ -19,19 +19,6 @@ public class EntityControllerTest {
     }
 
     @Test
-    public void testDeleteNonExistingEntity() {
-        EntityRepository repository = new EntityRepository();
-        assertThrows(IllegalArgumentException.class, () -> repository.delete("nonExistingId"));
-    }
-
-    @Test
-    public void testFindNonExistingEntity() {
-        EntityRepository repository = new EntityRepository();
-        Optional<Entity> entity = repository.find("nonExistingId");
-        assertFalse(entity.isPresent());
-    }
-
-    @Test
     public void testFindExistingEntity() {
         EntityRepository repository = new EntityRepository();
         Entity entityToSave = new Entity("existingId", "EntityData");
@@ -42,10 +29,41 @@ public class EntityControllerTest {
     }
 
     @Test
+    public void testFindNonExistingEntity() {
+        EntityRepository repository = new EntityRepository();
+        Optional<Entity> entity = repository.find("nonExistingId");
+        assertFalse(entity.isPresent());
+    }
+
+    @Test
     public void testSaveExistingEntity() {
         EntityRepository repository = new EntityRepository();
         Entity entityToSave = new Entity("existingId", "EntityData");
         repository.save(entityToSave);
         assertThrows(IllegalArgumentException.class, () -> repository.save(entityToSave));
+    }
+
+    @Test
+    public void testSaveNonExistingEntity() {
+        EntityRepository repository = new EntityRepository();
+        Entity entityToSave = new Entity("existingId", "EntityData");
+        repository.save(entityToSave);
+        assertThrows(IllegalArgumentException.class, () -> repository.save(entityToSave));
+    }
+
+    @Test
+    public void testDeleteNonExistingEntity() {
+        EntityRepository repository = new EntityRepository();
+        assertThrows(IllegalArgumentException.class, () -> repository.delete("nonExistingId"));
+    }
+
+    @Test
+    public void testDeleteExistingEntity() {
+        EntityRepository repository = new EntityRepository();
+        Entity entityToSave = new Entity("existingId", "EntityData");
+        repository.save(entityToSave);
+        repository.delete("existingId");
+        Optional<Entity> entity = repository.find("existingId");
+        assertFalse(entity.isPresent());
     }
 }

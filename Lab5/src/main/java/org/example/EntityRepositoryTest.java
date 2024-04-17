@@ -16,12 +16,6 @@ public class EntityRepositoryTest {
     }
 
     @Test
-    public void testDeleteNonExistingEntity() {
-        EntityRepository repository = new EntityRepository();
-        assertThrows(IllegalArgumentException.class, () -> repository.delete("nonExistingId"));
-    }
-
-    @Test
     public void testFindNonExistingEntity() {
         EntityRepository repository = new EntityRepository();
         Optional<Entity> entity = repository.find("nonExistingId");
@@ -44,5 +38,11 @@ public class EntityRepositoryTest {
         Entity entityToSave = new Entity("existingId", "EntityData");
         repository.save(entityToSave);
         assertThrows(IllegalArgumentException.class, () -> repository.save(entityToSave));
+    }
+
+    @Test
+    public void testDeleteNonExistingEntity() {
+        EntityRepository repository = new EntityRepository();
+        assertThrows(IllegalArgumentException.class, () -> repository.delete("nonExistingId"));
     }
 }
