@@ -7,9 +7,8 @@ import java.util.concurrent.ForkJoinPool;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        // Pobranie parametrów wejściowych
         if (args.length != 3) {
-            System.err.println("Usage: Main <inputDirectory> <outputDirectory> <threadPoolSize>");
+            System.err.println("inputDirectory outputDirectory threadPoolSize");
             System.exit(1);
         }
 
@@ -19,10 +18,8 @@ public class Main {
         Path outputDir = Path.of(args[1]);
         int threadPoolSize = Integer.parseInt(args[2]);
 
-        // Utworzenie własnej puli wątków
         ForkJoinPool customThreadPool = new ForkJoinPool(threadPoolSize);
 
-        // Uruchomienie przetwarzania obrazków w zrównoleglonej puli wątków
         customThreadPool.submit(() -> {
             try {
                 ImageProcessor.main(new String[]{inputDir.toString(), outputDir.toString()});

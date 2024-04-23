@@ -17,7 +17,7 @@ public class ImageProcessor {
     public static void main(String[] args) throws IOException {
 
         if (args.length != 2) {
-            System.err.println("Usage: ImageProcessor <inputDirectory> <outputDirectory>");
+            System.err.println("inputDirectory outputDirectory");
             System.exit(1);
         }
         long time = System.currentTimeMillis();
@@ -51,13 +51,12 @@ public class ImageProcessor {
     private static void processImages(List<Pair<String, BufferedImage>> images, Path outputDir) {
         images.parallelStream().forEach(pair -> {
             BufferedImage original = pair.getRight();
-            BufferedImage transformed = transformImage(original); // Metoda transformacji obrazka
+            BufferedImage transformed = transformImage(original);
             String fileName = pair.getLeft();
-            saveImage(transformed, outputDir.resolve(fileName)); // Metoda zapisu obrazka
+            saveImage(transformed, outputDir.resolve(fileName));
         });
     }
 
-    // Metoda do przekształcania obrazka (do zaimplementowania)
     private static BufferedImage transformImage(BufferedImage original) {
         BufferedImage image = new BufferedImage(original.getWidth(), original.getHeight(), original.getType());
         for (int i = 0; i < original.getWidth(); i++) {
@@ -74,9 +73,7 @@ public class ImageProcessor {
         return image;
     }
 
-    // Metoda do zapisu obrazka (do zaimplementowania)
     private static void saveImage(BufferedImage image, Path outputPath) {
-        // Tutaj należy zaimplementować zapis obrazka do pliku
         try {
             ImageIO.write(image, "jpg", outputPath.toFile());
         } catch (IOException e) {
