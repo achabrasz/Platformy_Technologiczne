@@ -1,0 +1,15 @@
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/bin/Debug/net7.0/Lab7
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/bin/Debug/net7.0/Lab7.deps.json
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/bin/Debug/net7.0/Lab7.runtimeconfig.json
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/bin/Debug/net7.0/Lab7.dll
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/bin/Debug/net7.0/Lab7.pdb
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.csproj.AssemblyReference.cache
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.AssemblyInfoInputs.cache
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.AssemblyInfo.cs
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.csproj.CoreCompileInputs.cache
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.dll
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/refint/Lab7.dll
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.pdb
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/Lab7.genruntimeconfig.cache
+/Users/Adam/Studia/Platformy_Technologiczne/Lab7/obj/Debug/net7.0/ref/Lab7.dll

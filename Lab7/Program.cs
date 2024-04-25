@@ -51,7 +51,7 @@ namespace ConsoleApp
             }
             foreach (var subDirectory in directory.GetDirectories())
             {
-                Console.WriteLine($"{new string(' ', indent)}{subDirectory.Name} ({subDirectory.GetFiles().Length}) ----");
+                Console.WriteLine($"{new string(' ', indent)}{subDirectory.Name} ({subDirectory.GetFiles().Length + subDirectory.GetDirectories().Length}) ----");
                 DisplayDirectoryContents(subDirectory, indent + 2);
             }
         }
@@ -67,7 +67,7 @@ namespace ConsoleApp
             }
             foreach (var subDirectory in directory.GetDirectories())
             {
-                items[subDirectory.Name] = subDirectory.GetFiles().Length;
+                items[subDirectory.Name] = subDirectory.GetFiles().Length + subDirectory.GetDirectories().Length;
             }
 
             return items;
