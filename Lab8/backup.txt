@@ -1,0 +1,58 @@
+//using System;
+//using System.IO;
+//using System.Windows;
+//using Microsoft.Win32;
+//using Application = System.Windows.Application;
+//using MessageBox = System.Windows.Forms.MessageBox;
+//using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+
+//namespace YourNamespace
+//{
+//    public class Program
+//    {
+//        [STAThread]
+//        public static void Main()
+//        {
+//            Application app = new Application();
+//            app.Run(new MainWindow());
+//        }
+//    }
+//    public partial class MainWindow : Window
+//    {
+//        public MainWindow()
+//        {
+//            InitializeComponent();
+//        }
+
+//        private void OpenMenuItem_Click(object sender, RoutedEventArgs e)
+//        {
+//            OpenFileDialog openFileDialog = new OpenFileDialog();
+//            openFileDialog.Title = "Select a file to open";
+//            openFileDialog.CheckFileExists = true;
+//            openFileDialog.CheckPathExists = true;
+//            openFileDialog.ValidateNames = true;
+
+//            if (openFileDialog.ShowDialog() == true)
+//            {
+//                string selectedFilePath = openFileDialog.FileName;
+//                // Now you can use 'selectedFilePath' to open the file
+//                try
+//                {
+//                    string fileContent = File.ReadAllText(selectedFilePath);
+//                    // Here you can do something with the file content, such as displaying it in a TextBox
+//                    MessageBox.Show($"File content: {fileContent}", "File content", (MessageBoxButtons)MessageBoxButton.OK, (MessageBoxIcon)MessageBoxImage.Information);
+//                }
+//                catch (Exception ex)
+//                {
+//                    MessageBox.Show($"An error occurred while opening the file: {ex.Message}", "Error", (MessageBoxButtons)MessageBoxButton.OK, (MessageBoxIcon)MessageBoxImage.Error);
+//                }
+//            }
+//        }
+
+//        private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
+//        {
+//            // Close the application
+//            this.Close();
+//        }
+//    }
+//}
