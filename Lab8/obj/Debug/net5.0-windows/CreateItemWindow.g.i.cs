@@ -101,7 +101,7 @@ namespace Lab8 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Lab8;component/createitemwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lab8;V1.0.0.0;component/createitemwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CreateItemWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

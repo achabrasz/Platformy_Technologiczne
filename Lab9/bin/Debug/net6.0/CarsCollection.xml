@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cars>
+  <car model="E250" year="2009">
+    <engine model="CGI 204HP">
+      <displacement>1.8</displacement>
+      <hp>204</hp>
+      <fuelType>CGI</fuelType>
+    </engine>
+  </car>
+  <car model="E350" year="2009">
+    <engine model="CGI 292HP">
+      <displacement>3.5</displacement>
+      <hp>292</hp>
+      <fuelType>CGI</fuelType>
+    </engine>
+  </car>
+  <car model="A6" year="2012">
+    <engine model="FSI 187HP">
+      <displacement>2.5</displacement>
+      <hp>187</hp>
+      <fuelType>FSI</fuelType>
+    </engine>
+  </car>
+  <car model="A6" year="2012">
+    <engine model="FSI 220HP">
+      <displacement>2.8</displacement>
+      <hp>220</hp>
+      <fuelType>FSI</fuelType>
+    </engine>
+  </car>
+  <car model="A6" year="2012">
+    <engine model="TFSI 295HP">
+      <displacement>3</displacement>
+      <hp>295</hp>
+      <fuelType>TFSI</fuelType>
+    </engine>
+  </car>
+  <car model="A6" year="2011">
+    <engine model="TDI 175HP">
+      <displacement>2</displacement>
+      <hp>175</hp>
+      <fuelType>TDI</fuelType>
+    </engine>
+  </car>
+  <car model="A6" year="2011">
+    <engine model="TDI 309HP">
+      <displacement>3</displacement>
+      <hp>309</hp>
+      <fuelType>TDI</fuelType>
+    </engine>
+  </car>
+  <car model="S6" year="2012">
+    <engine model="TFSI 414HP">
+      <displacement>4</displacement>
+      <hp>414</hp>
+      <fuelType>TFSI</fuelType>
+    </engine>
+  </car>
+  <car model="S8" year="2012">
+    <engine model="TFSI 513HP">
+      <displacement>4</displacement>
+      <hp>513</hp>
+      <fuelType>TFSI</fuelType>
+    </engine>
+  </car>
+</cars>
