@@ -1,0 +1,5 @@
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12\obj\Debug\net8.0\Lab12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12\obj\Debug\net8.0\Lab12.AssemblyInfoInputs.cache
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12\obj\Debug\net8.0\Lab12.AssemblyInfo.cs
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12\obj\Debug\net8.0\Lab12.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12\obj\Debug\net8.0\Lab12.sourcelink.json

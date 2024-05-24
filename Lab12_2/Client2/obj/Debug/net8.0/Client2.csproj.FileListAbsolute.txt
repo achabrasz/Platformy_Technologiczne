@@ -1,0 +1,15 @@
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\bin\Debug\net8.0\Client2.exe
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\bin\Debug\net8.0\Client2.deps.json
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\bin\Debug\net8.0\Client2.runtimeconfig.json
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\bin\Debug\net8.0\Client2.dll
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\bin\Debug\net8.0\Client2.pdb
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.AssemblyInfoInputs.cache
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.AssemblyInfo.cs
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.sourcelink.json
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.dll
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\refint\Client2.dll
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.pdb
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\Client2.genruntimeconfig.cache
+C:\Users\Adam\Studia\4 semestr\Platformy Technologiczne\Platformy_Technologiczne\Lab12_2\Client2\obj\Debug\net8.0\ref\Client2.dll
