@@ -44,7 +44,6 @@ public class Server
                     MyObject receivedObject = JsonSerializer.Deserialize<MyObject>(json);
                     Console.WriteLine("Received object with Value: " + receivedObject.Value);
 
-                    // Processing: increment the Value field
                     receivedObject.Value += 1;
 
                     string responseJson = JsonSerializer.Serialize(receivedObject);

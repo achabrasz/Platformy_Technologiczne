@@ -42,7 +42,7 @@ public class Client
             string json = JsonSerializer.Serialize(obj);
             writer.WriteLine(json);
             Console.WriteLine("Sent object with Value: " + obj.Value);
-            Thread.Sleep(3000); // Send data every 2 seconds
+            Thread.Sleep(3000);
         }
     }
 
